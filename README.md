@@ -1,6 +1,7 @@
 # SMEA
-Java Implementation of the Sample application which is a secure message exchange application (SMEA)  
-The messages are stored encrypted in the database and the intended recipient can decrypt and read them.  
+Java Implementation of a secure message exchange application (SMEA).  
+This application serves as a sample of client side encryption in Java for PostgreSQL.  
+The messages are stored encrypted in PostgreSQL and the intended recipient can decrypt and read them.  
 The application uses symmetric as well as asymmetric encryption.  
 Messages are encrypted and decrypted using a secret key.  
 a) The public keys of both Alice and Bob are stored in database.  
@@ -12,7 +13,7 @@ f) She then encrypts message using SK and saves cipher text in the database.
 g) When Bob wants to read messages from Alice, he first decrypts MEK_R using his private key, to get SK.  
 h) Bob then decrypts message sent by Alice using SK.  
   
-The database schema is as follows:  
+The PostgreSQL schema is as follows:  
   
   CREATE SCHEMA smea;  
   CREATE TABLE smea.tbl_users(  
@@ -63,4 +64,8 @@ Run Command:
   /home/abbas/.m2/repository/org/postgresql/postgresql/42.2.5/postgresql-42.2.5.jar  
   com.edb.smea.App add-user  
   
-  
+Commands supported by the application
+  add-user
+  add-friend
+  send-messages
+  read-messages
