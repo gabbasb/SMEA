@@ -1,8 +1,10 @@
 # SMEA
-Java Implementation of the Sample application which is a secure message exchange application (SMEA)
-The messages are stored encrypted in the database and the intended recipient can decrypt and read them. The application uses symmetric as well as asymmetric encryption. Messages are encrypted and decrypted using a secret key.
-a) The public keys of both Alice and Bob are stored in database.
-b) When Alice makes Bob her friend, Alice generates a secret key (SK).
+Java Implementation of the Sample application which is a secure message exchange application (SMEA)  
+The messages are stored encrypted in the database and the intended recipient can decrypt and read them.  
+The application uses symmetric as well as asymmetric encryption.  
+Messages are encrypted and decrypted using a secret key.  
+a) The public keys of both Alice and Bob are stored in database.  
+b) When Alice makes Bob her friend, Alice generates a secret key (SK).  
 c) The secret key (SK) is encrypted using Alice’s public key. This (MEK_S) will be used for message encryption.
 d) The secret key (SK) is also encrypted using Bob’s public key. This (MEK_R) will be used for message decryption.
 e) When Alice wants to send message to Bob, she first decrypts MEK_S using her private key to get SK.
