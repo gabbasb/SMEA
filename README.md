@@ -72,3 +72,9 @@ Commands supported by the application
   add-friend  
   send-messages  
   read-messages  
+
+
+If you are using cryptography while programming in Java, the following document is a must see:  
+https://docs.oracle.com/javase/7/docs/technotes/guides/security/StandardNames.html#AlgorithmParameterGenerator  
+  
+  
