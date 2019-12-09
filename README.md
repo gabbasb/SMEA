@@ -8,8 +8,8 @@ a) The public keys of both Alice and Bob are stored in database.
 b) When Alice makes Bob her friend, Alice generates a secret key (SK).  
 c) The secret key (SK) is encrypted using Alice’s public key. This (MEK_S) will be used for message encryption.  
 d) The secret key (SK) is also encrypted using Bob’s public key. This (MEK_R) will be used for message decryption.  
-e) When Alice wants to send message to Bob, she first decrypts MEK_S using her private key to get SK.  
-f) She then encrypts message using SK and saves cipher text in the database.  
+e) When Alice wants to send message to Bob, she first decrypts MEK_S using her private key to get SK.This makes sure that the sender is Alice, because only Alice can decrypt MEK_S using her private key.  
+f) She then encrypts message using SK and saves cipher text in the database. This makes sure that only Bob can read them because only Bob can decrypt MEK_R using his private key.  
 g) When Bob wants to read messages from Alice, he first decrypts MEK_R using his private key, to get SK.  
 h) Bob then decrypts message sent by Alice using SK.  
   
